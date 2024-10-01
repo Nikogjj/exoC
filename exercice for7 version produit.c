@@ -1,31 +1,20 @@
 #include <stdio.h>
 int main(){
     int tab[7];
-    for(int i =0;i<=7;i++){
-        tab[i]=i;
-        printf("%d\n", tab[i]);
-    }
-    printf("Somme\n");
-        int somme=0;
-    for(int i=0;i<=7;i++){
-        printf("%d",somme);
-        somme=tab[i]+somme;
-        printf("+%d=%d\n",tab[i],somme);
-    }
-    printf("Quotient\n");
-    float quotient=tab[1];
-    for(int i=1;i<=7;i++){
-        quotient=quotient/tab[i];
+for(int i =1;i<=7;i++){
+    tab[i-1]=i;
+    printf("%d\n", tab[i-1]);
+}
+printf("produit\n");
+int produit=1;
+for (int i = 0; i <=6; i++){
+    produit=tab[i]*produit;
+}
+    printf("%d",produit);   
+if (produit%2==0){
+    printf("le nombre est paire");
+}
 
-        
-        // if(tab[i]==0 || quotient==0){
-        //     printf("%d/0 = Division impossible\n",tab[i]);
-        //     quotient=tab[i];
-        // }
-        // else{
-        // printf("%f\n",quotient);
-        // }
-    }
-    printf("%f",quotient);
-    return 0;
+
+return 0;
 }
