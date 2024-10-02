@@ -2,15 +2,28 @@
 #include <stdlib.h>
 #include <sys/random.h>
 
-float aleatoire(float,float);
+#define PAIR 1
+
 
 int main(){
-    while(1){
-        float r = aleatoire(5,15);
-        printf("random : %f\n",r);
-    }
-    return 0;
+   if(isPair(5) == 100){
+        printf("5 est pair");
+   }
 }
+
+int isPair(int number){
+    if(number % 2 == 0){
+        return 100; 
+    }else{
+        return 0;
+    }
+}
+
+//     while(1){
+//         float r = aleatoire(5,15);
+//         printf("random : %f\n",r);
+//     }
+//     return 0;
 
 
 // float aleatoire(float from, float to){
