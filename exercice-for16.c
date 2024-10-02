@@ -3,18 +3,18 @@
 
 int main(){ 
     int tab[10]={1,2,3,4,5,6,7,8,9,10};
-
     int temp=tab[9];
-    for (int i = 0; i < 10; i++)
+    for (int i = 9; i >=0; i--)
     {
-        tab[i]=tab[i+1];
-        for (int j = 0; i < 10; i++)
-            {
-            tab[j+1]=tab[j];
-            }
-            
-    }
+        if (i==0)
+        {
+            tab[0]=temp;
+        }
+        else{
+        tab[i]=tab[i-1];
 
+        }
+    }
 
 
         for (int i = 0; i < 10; i++)
