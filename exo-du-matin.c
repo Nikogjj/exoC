@@ -1,14 +1,37 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+#define BUF_SIZE 255
 
 int main(){
-    int tab [5]={5,3,5,10,5};
 
-
-    for (int i = 0; i < 5; i++)
+    int tab [BUF_SIZE];
+    getentropy(tab,BUF_SIZE);
+    int somme=0;
+    for (int i = 0; i < BUF_SIZE; i++)
     {
-        if(tab[i]%2==0)
-        printf("%d est un nombre paire",tab[i]);
+        somme=tab[i]+somme;
     }
-    return 0;
+    
+    srand(somme);
+
+    while (1)
+    {
+        rand();
+        float r = (float)rand()/RAND_MAX*10;
+        printf("%f ",r);
+        if ((int)r%2==0)
+        {
+            printf("ce nombre est paire\n");
+        }
+        if ((int)r%2!=0)
+        {
+            printf("ce nombre est impaire\n");
+        }
+        
+        
+    }
+    
     
 }
